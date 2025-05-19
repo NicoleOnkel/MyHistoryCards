@@ -1,6 +1,7 @@
 package com.example.myhistorycards
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -22,21 +23,21 @@ class Scorecard : AppCompatActivity() {
         }
 
         // Retrieve the score and total questions from the Intent
-        val score = intent.getIntExtra("scoreOnNext", 0) // 0 is a default value if not found
+        val score = intent.getIntExtra("scoreOnNext", 0)
         val exit_butt = findViewById<Button>(R.id.exit_butt)
         // Find your TextViews
         val actualScoreTextView = findViewById<TextView>(R.id.actualScoreTextView) // TextView for "Your Score: X / Y"
-        val totalQuestions = intent.getIntExtra("totalQuestions", 0) // 0 is a default value
+        val totalQuestions = intent.getIntExtra("totalQuestions", 0)
 
-        // Find your TextViews (or other UI elements) to display the score
-        val scoreTextView = findViewById<TextView>(R.id.feedback) // Replace with your TextView ID
-         // Example for feedback
+
+        val scoreTextView = findViewById<TextView>(R.id.feedback)
+
 
         // Display the score
-        // You might want to format this string more nicely
+
         actualScoreTextView.text = "Your Score: $score / $totalQuestions"
 
-        // Optionally, display feedback based on the score
+        // display feedback based on the score
         val percentage = if (totalQuestions > 0) {
             (score.toDouble() / totalQuestions.toDouble()) * 100
         } else {
@@ -49,6 +50,14 @@ class Scorecard : AppCompatActivity() {
             percentage >= 50 -> "Good Effort!"
             else -> "Keep Practicing!"
         }
+
+
+       val review_butt = findViewById<Button>(R.id.review_butt)
+
+        review_butt.setOnClickListener {
+            val intent = Intent(this, ReviewTest::class.java)
+            startActivity(intent)}
+        //Review button
 
 
 

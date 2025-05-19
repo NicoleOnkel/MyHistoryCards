@@ -1,0 +1,9 @@
+<TextView android:id="@+id/actualScoreTextView" android:layout_width="wrap_content"
+    android:layout_height="wrap_content" android:textSize="24sp" tools:text="Your Score: 8 / 10" />
+
+<TextView android:id="@+id/feedbackMessageTextView" android:layout_width="wrap_content"
+android:layout_height="wrap_content" android:textSize="18sp" android:layout_marginTop="16dp"
+tools:text="Great Job!" />
+
+<Button android:id="@+id/exit_butt" android:layout_width="wrap_content" android:layout_height="wrap_content"
+android:text="Exit" />

@@ -119,7 +119,7 @@ false_butt.setOnClickListener { // You'll need a similar listener for the false 
         }
     }
 }
-
+//Score card button to display score on next page
 score_butt.setOnClickListener {
     val intent = Intent(this, Scorecard::class.java)
     intent.putExtra("scoreOnNext", score)
