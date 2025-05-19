@@ -12,5 +12,8 @@ Screenshots
 
 ![Screenshot_2025 05 19_21 45 52 361](https://github.com/user-attachments/assets/836fbbd3-21f3-4c0a-9379-bfd4af926d71)
 
+![Screenshot_2025 05 19_22 08 42 110](https://github.com/user-attachments/assets/92413e7d-0803-479c-a52e-de80a463fcdd)
+
+
 
 
