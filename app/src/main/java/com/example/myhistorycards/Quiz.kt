@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -62,7 +63,7 @@ class Quiz : AppCompatActivity() {
     }
 }
 
-// Initial display
+
 displayQuestion()
 
 next_butt.setOnClickListener {
@@ -74,8 +75,13 @@ true_butt.setOnClickListener {
     if (currentQuestionIndex < questions.size) { //
         if (answers[currentQuestionIndex] == "True") {
             score++
+            Toast.makeText(this@Quiz, "You are correct!", Toast.LENGTH_SHORT).show() //Correct feedback
+
 
         } else {
+
+            Toast.makeText(this@Quiz, "Incorrect!", Toast.LENGTH_SHORT).show() //Incorrect feedback
+
 
         }
         // Prevent answering the same question multiple times before moving to next
@@ -96,7 +102,10 @@ false_butt.setOnClickListener { // You'll need a similar listener for the false 
         if (answers[currentQuestionIndex] == "False") {
             score++
 
+            Toast.makeText(this@Quiz, "You are correct!", Toast.LENGTH_SHORT).show()//correct feedback
+
         } else {
+            Toast.makeText(this@Quiz, "Incorrect!", Toast.LENGTH_SHORT).show()//incorrect feedback
 
         }
         true_butt.isEnabled = false
