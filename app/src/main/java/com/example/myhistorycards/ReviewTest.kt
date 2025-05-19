@@ -40,7 +40,7 @@ class ReviewTest : AppCompatActivity() {
             "True"
         )
 
-        // Use a StringBuilder to efficiently build the text
+
         val contentBuilder = StringBuilder()
 
         for (i in questions.indices) {
